@@ -40,7 +40,7 @@ var stringifyJSON = function(obj) {
     } else {
       return '{}';
     }
-  } else { // Case where object is boolean or number
+  } else if (typeof(obj) === 'boolean' || typeof(obj) === 'number') { // Case where object is boolean or number
     return obj.toString();
   }
 };
